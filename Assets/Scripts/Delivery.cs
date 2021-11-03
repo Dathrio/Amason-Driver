@@ -15,7 +15,7 @@ public class Delivery : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // If (the thing we trigger is the package) then print  package picked up
-        if (other.tag == "Package")
+        if (other.tag == "Package" && packageAquired == false)
         {
             Debug.Log("Package Picked up");
             packageAquired = true;
